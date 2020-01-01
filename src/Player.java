@@ -101,18 +101,16 @@ public class Player {
 	
 	public void spawnEnemy (ArrayList<Enemy> Enemies, double spawnLocationDegrees) {
 		
+		// the characteristics of all enemies on spawn
 		int enemyRadius = 20;
-		int enemyHealth = 5;	
-		int enemySpeed = 15;
+		int enemyHealth = 5;
+		int enemySpeed = 20;
 		
 		
 		
 		Enemies.add(new Enemy(playerX + (playAreaRadius - enemyRadius)*Math.cos(Math.toRadians(spawnLocationDegrees)),
 				playerY - (playAreaRadius - enemyRadius)*Math.sin(Math.toRadians(spawnLocationDegrees)),
 				enemySpeed, (spawnLocationDegrees + 180) % 360, enemyRadius, enemyHealth));
-		
-		
-		
 	}
 	
 	
